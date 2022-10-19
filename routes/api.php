@@ -19,9 +19,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('login', [UserController::class, 'login']);
-Route::post('register', [UserController::class, 'register']);
-Route::get('logout', [UserController::class, 'logout'])->middleware('auth:api');
 Route::get('login', function () {
     return response()->json('login dulu om');
 })->name('login');
+
+
+Route::post('login', [UserController::class, 'login']);
+Route::post('register', [UserController::class, 'register']);
+Route::get('logout', [UserController::class, 'logout'])->middleware('auth:api');
