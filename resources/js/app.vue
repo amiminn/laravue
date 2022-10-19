@@ -1,14 +1,12 @@
-<template lang="">
+<template>
     <div>
-        <h1>Lara vue {{ msg }}</h1>
+        <router-view />
     </div>
 </template>
 <script>
 export default {
     data() {
-        return {
-            msg: "oke",
-        };
+        return {};
     },
 };
 </script>
